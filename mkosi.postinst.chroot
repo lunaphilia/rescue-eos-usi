@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -e
+
+if [ ! -d /etc/pacman.d/gnupg ]; then
+	pacman-key --init
+fi
+
+pacman-key --populate
+
